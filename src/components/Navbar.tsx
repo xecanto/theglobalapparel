@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/about", label: "About" },
@@ -26,7 +27,7 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between h-16 section-padding">
         <Link to="/" className="font-display font-bold tracking-tight flex items-center gap-3 z-50">
-          <img src="/logo.png" alt="Global Apparel" className="h-9 w-auto drop-shadow-sm dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]" />
+          <img src={logo} alt="Global Apparel" className="h-9 w-auto drop-shadow-sm dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]" />
           <div className="flex flex-col items-start leading-none text-right">
             <span className="text-[1.15rem]">GLOBAL</span>
             <span className="text-[0.8rem] text-primary">APPAREL</span>

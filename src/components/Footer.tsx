@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import FadeIn from "./FadeIn";
+import logo from "@/assets/logo.png";
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
                   <span className="text-[1.3rem]">GLOBAL</span>
                   <span className="text-[0.85rem] opacity-70">APPAREL</span>
                 </div>
-                <img src="/logo.png" alt="Global Apparel" className="h-10 w-auto drop-shadow-[0_0_10px_rgba(218,221,224,0.15)]" />
+                <img src={logo} alt="Global Apparel" className="h-10 w-auto drop-shadow-[0_0_10px_rgba(218,221,224,0.15)]" />
               </div>
               <p className="text-sm leading-relaxed opacity-70 max-w-xs">
                 Premium custom apparel manufacturing from Pakistan. Full-stack
