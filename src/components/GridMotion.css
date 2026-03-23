@@ -1,0 +1,123 @@
+.noscroll {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.intro-grid {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridMotion-container {
+    gap: 1.5rem;
+    flex: none;
+    position: relative;
+    width: 180vw;
+    height: 180vh;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 100%;
+    transform: rotate(-15deg);
+    transform-origin: center center;
+    z-index: 2;
+}
+
+@media (max-width: 1024px) {
+    .gridMotion-container {
+        width: 200vw;
+        height: 150vh;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .gridMotion-container {
+        width: 250vw;
+        height: 120vh;
+        gap: 1.5rem;
+    }
+}
+
+.row-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(7, 1fr);
+    will-change: transform, filter;
+}
+
+@media (max-width: 1024px) {
+    .row-grid {
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .row-grid {
+        gap: 1rem;
+    }
+}
+
+.row__item-grid {
+    position: relative;
+}
+
+.row__item-inner-grid {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+    .row__item-inner-grid {
+        border-radius: 0.75rem;
+    }
+}
+
+.row__item-img-grid {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.row__item-inner-grid:hover .row__item-img-grid {
+    transform: scale(1.15);
+}
+
+.row__item-content-grid {
+    padding: 1rem;
+    text-align: center;
+    z-index: 1;
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+    .row__item-content-grid {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+}
